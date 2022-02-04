@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,11 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
   <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
+
   <link rel='stylesheet' href='@fortawesome/fontawesome-free/css/all.min.css' />
+
+
+  <style>
+   
+
+
+    #myVideo {
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    </style>
 </head>
 <body>
   <!-- Main Nav bar  -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-black navbar-dark">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#">
       <img src="/images/logo.JPG" alt="logo" style="width:50px;">
@@ -35,6 +55,16 @@
         <% } %>            
             <i class="fas fa-project-diagram"></i> Projects </a>
         </a>
+    </li>
+    <li class="nav-link-desktop w-nav-link">
+      <% if (title == "services") { %>
+          <a class="nav-link active" href="/services">
+      <% } else { %>
+          <a class="nav-link" href="/services">
+      <% } %>            
+      <i class="fab fa-servicestack"></i> Services </a>
+      </a>
+    </li>
       </li>
       <li class="nav-item">
         <% if (title == "About") { %>
@@ -46,15 +76,18 @@
         </a>
       </li>
       <li class="nav-item">
-        <% if (title == "Users") { %>
-            <a class="nav-link active" href="/users">
+        <% if (title == "Contact me") { %>
+            <a class="nav-link active" href="/contactme">
         <% } else { %>
-            <a class="nav-link" href="/users">
+            <a class="nav-link" href="/contactme">
         <% } %>            
-            <i class="fas fa-user"></i> Users </a>
+            <i class="fas fa-user"></i> Connect </a>
         </a>
       </li>
       
     </ul>
   </nav>
-  
+
+  <video autoplay muted loop id="myVideo">
+    <source src="images/myvideo.mp4" type="video/mp4">
+  </video>

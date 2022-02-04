@@ -6,18 +6,15 @@ let indexxcontroller = require('../controllers/indexcontroller')
 router.get('/', indexxcontroller.home);
 
 /* GET projects page. */
-router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Projects' });
-});
+router.get('/contactme', indexxcontroller.contactme);
 
 /* GET about page. */
-router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About' });
-});
+router.get('/about', indexxcontroller.aboutme);
 
 /* GET contactme page. */
-router.get('/contactme', function(req, res, next) {
-  res.render('index', { title: 'Contactme' });
-});
+router.get('/projects', indexxcontroller.projects);
+
+/* GET Services page. */
+router.get('/Services', indexxcontroller.services);
 
 module.exports = router;

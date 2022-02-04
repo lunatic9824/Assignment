@@ -1,0 +1,71 @@
+<% include partials/header.ejs %>
+<style>
+    label.label1
+    {
+    font-size: 1rem;
+    color: white;
+    font-family: Trebuchet MS;
+    font-weight: bold; 
+    
+  }
+</style>
+
+
+
+  
+
+
+<div style="text-align: center;text-decoration-line: underline;">
+    <h1>Contact me</h1><br>
+</div>
+
+
+<p  style="font-size: 1rem;  color: white; font-family: Trebuchet MS; font-weight: bold;">
+    you can send me an email via:
+    
+     <a href = "mailto: pankajsharma9824@gmail.com">pankajsharma9824@gmail.com </a>
+</p>
+<!-- Form Submision -->
+<form  action="/" method="GET" >
+
+
+
+<div class="row">
+    <div class="col-md-8 mb-8 mb-lg-8">
+    <div class="form-group" >
+        <label class="label1" for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"><br>
+        </div>
+        </div> <br>
+
+        <div class="col-md-8 mb-8 mb-lg-8">
+            <div class="form-group">
+                <label class="label1" for="exampleFormControlInput1">First Name </label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+            </div>
+        </div>
+        <div class="col-md-8 mb-8 mb-lg-8">
+            <div class="form-group">
+                <label class="label1" for="exampleFormControlInput1">Last Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+            </div>
+        </div>
+        </div>
+<div>
+</div>
+
+<div class="form-group">
+    <label class="label1" for="exampleFormControlTextarea1">Your Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" ></textarea>
+</div>
+<button type="submit" class="btn btn-primary" >Submit</button>
+</form>
+
+</div>
+</div>
+
+
+
+
+
+<% include partials/footer.ejs%>
