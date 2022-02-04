@@ -15,6 +15,6 @@ router.get('/about', indexxcontroller.aboutme);
 router.get('/projects', indexxcontroller.projects);
 
 /* GET Services page. */
-router.get('/Services', indexxcontroller.services);
+router.get('/services', indexxcontroller.services);
 
 module.exports = router;

@@ -12,7 +12,7 @@ exports.projects = function(req, res, next) {
 }
 
 exports.services = function(req, res, next) {
-    res.render('services', { title: 'Services' });
+    res.render('services', { title: 'services' });
 }
 
 exports.aboutme = function(req, res, next) {
