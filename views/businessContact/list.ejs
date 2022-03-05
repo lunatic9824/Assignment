@@ -18,7 +18,7 @@
             <h1 style="text-align: center; color: cyan; text-decoration-line: underline"><%= title %></h1>
             <br><br>
             <% if(typeof displayName == 'string' && displayName) { %>
-            <a href="/business-contact-list/add" class="btn btn-primary" style="margin-bottom: 10px;"role="button">
+            <a href="/Bcontact/add" class="btn btn-primary" style="margin-bottom: 10px;"role="button">
             <i class="fas fa-plus-circle" ></i>Add Business Contact</a>
             <% } %>
             <br>
@@ -42,11 +42,11 @@
                         <td class="text-center"style="color: cyan"><%= BusinessContactList[count].Email %></td>
                         <% if(typeof displayName == 'string' && displayName) { %>
                         <td class="text-center col-1">
-                            <a href="/business-contact-list/edit/<%=BusinessContactList[count]._id %>" class="btn btn-primary btn-sm">
+                            <a href="/Bcontact/edit/<%=BusinessContactList[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i> Edit</a>
                         </td>
                         <td class="text-center col-1">
-                            <a href="/business-contact-list/delete/<%=BusinessContactList[count]._id%> " class="btn btn-danger btn-sm">
+                            <a href="/Bcontact/delete/<%=BusinessContactList[count]._id%> " class="btn btn-danger btn-sm">
                             <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>
                     

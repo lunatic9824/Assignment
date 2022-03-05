@@ -41,7 +41,7 @@ module.exports.processAddPage=(req,res,next)=>{
             else
             {
                 //refresh the business list
-                res.redirect('/business-contact-list');
+                res.redirect('/Bcontact');
             }
         });
 }
@@ -84,7 +84,7 @@ module.exports.processEditPage=(req,res,next)=>{
     else
     {
         //show edit view
-        res.redirect('/business-contact-list');
+        res.redirect('/Bcontact');
     }
  });
 
@@ -102,7 +102,7 @@ module.exports.performDeletePage=(req,res,next)=>{
         else 
         {
             //refresh buisness contact list
-            res.redirect('/business-contact-list');
+            res.redirect('/Bcontact');
         }
     });
 }

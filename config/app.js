@@ -60,7 +60,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
 app.use('/inventory', inventoryRouter);
-app.use('/business-contact-list', bcontact);
+app.use('/Bcontact', bcontact);
 
 
 // catch 404 and forward to error handler
