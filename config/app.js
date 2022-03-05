@@ -32,30 +32,28 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
 app.use(session({
-  secret: "SomeSecret",
+  secret: "Secret",
   saveUninitialized:false,
   resave:false
 }));
 
-//initialize flash
+
 app.use(flash());
 
-//initialize passport
+
 app.use(passport.initialize());
 app.use(passport.session());
 
-//passport user configuration
 
 
-//create User Model Instance
+
 let userModel =require('../model/user');
 let User = userModel.User;
 
-//implement a user Authentication stratergy
+
 passport.use(User.createStrategy());
 
 
-//serialize and deserialize the User info
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 

@@ -1,9 +1,16 @@
+
+<!-- 
+ Name : Pankaj Sharma
+ Id:301239159
+
+
+
+-->
 <% include ../partials/header.ejs%>
 
 
   
 
-<!--Main Content-->
 <main class="container">
     <div class="row" >
         <div class="offset-md-1 col-md-9">
@@ -16,7 +23,7 @@
             <% } %>
             <br>
             <table class="table table-bordered table-striped table-hover" >
-                <!--Header Row-->
+               
                 <tr>
                     <th class="text-center col-1" style="color: cyan">Contact Name</th>
                     <th class="text-center col-2" style="color: cyan">Contact Number</th>
@@ -27,7 +34,7 @@
                     <% } %>
                 </tr>
 
-                <!--Repeatable  Template Row-->
+                
                 <% for(let count =0;count<BusinessContactList.length;count++){ %>
                     <tr>
                         <td class="text-center" style="color: cyan"><%= BusinessContactList[count].Contact_name %></td>

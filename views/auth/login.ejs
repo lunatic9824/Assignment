@@ -1,3 +1,12 @@
+<!-- 
+ Name : Pankaj Sharma
+ Id:301239159
+
+
+
+-->
+
+
 <% include ../partials/header.ejs%>
 
 
@@ -5,7 +14,6 @@
 
 
 <main class="container">
-    <!--Message Area-->
     <% if(messages.length >0){%>
         <div class="alert alert-danger">
             <%= messages %>
@@ -14,17 +22,17 @@
 
         <div class="row">
             <div class="offset-md-4 col-md-4">
-                <h1>Please Login</h1>
+                <h1 style ="color: cyan;">Please Login</h1>
                 <form action="" method="POST" autocomplete="off">
                     <fieldset class="form-group">
-                        <label for="username">Username:</label>
+                        <label for="username"style ="color: cyan;">Username:</label>
                         <input type="text" class="form-control"
                         name="username" placeholder="Enter username"
                         id="username" required autofocus>
                     </fieldset>
 
                     <fieldset class="form-group">
-                        <label for="password">Password:</label>
+                        <label for="password"style ="color: cyan;">Password:</label>
                         <input type="password" class="form-control"
                         name="password" placeholder="Enter password"
                         id="password" required >
