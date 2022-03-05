@@ -24,4 +24,24 @@ router.get('/projects', indexxcontroller.projects);
 /* GET Services page. */
 router.get('/services', indexxcontroller.services);
 
+
+
+
+
+
+router.get('/login',indexxcontroller.displayLoginPage);
+
+/* POST Route for processing the login page */
+router.post('/login',indexxcontroller.processLoginPage);
+
+/* GET Route for the displaying the register page */
+router.get('/register',indexxcontroller.displayRegisterPage);
+
+/* POST Route for processing the register page */
+router.post('/register',indexxcontroller.processRegisterPage);
+
+/* GET to perform User Logout */
+router.get('/logout',indexxcontroller.performLogout);
+
+
 module.exports = router;

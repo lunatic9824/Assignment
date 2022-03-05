@@ -4,7 +4,19 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+//module for authentication
+let session =require('express-session');
+let passport = require('passport');
+let passportLocal=require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash=require('connect-flash');
+
+
+
+
 let indexRouter = require('../routes/index');
+let inventoryRouter = require('../routes/inventory');
+let bcontact = require('../routes/bcontact');
 
 let app = express();
 
@@ -19,8 +31,38 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
+app.use(session({
+  secret: "SomeSecret",
+  saveUninitialized:false,
+  resave:false
+}));
+
+//initialize flash
+app.use(flash());
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//passport user configuration
+
+
+//create User Model Instance
+let userModel =require('../model/user');
+let User = userModel.User;
+
+//implement a user Authentication stratergy
+passport.use(User.createStrategy());
+
+
+//serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 app.use('/', indexRouter);
+app.use('/inventory', inventoryRouter);
+app.use('/business-contact-list', bcontact);
 
 
 // catch 404 and forward to error handler
